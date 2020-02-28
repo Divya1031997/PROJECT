@@ -1,0 +1,17 @@
+<input type="text" id="itemName" required [(ngModel)]="itemName" name="itemName">
+<input type="button" value="Search" (click)="get()"/>
+<div *ngFor="let it of items">
+   <div class="card col-md-3">
+   
+    <div class="card-body">
+      
+      <h4 class="card-body">{{items|json}}</h4>
+      <input type="button" class="btn btn-primary stretched-link" value="addToCart" (click)="addToCart()">
+      
+ 
+    
+      
+       
+  </div>
+</div>
+</div>
