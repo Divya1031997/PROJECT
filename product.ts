@@ -1,6 +1,5 @@
-export class Item {
+export class Product {
 
-    itemid:number;
     categoryid:number;
     subcategoryid:number;
     itemCost:number;
@@ -10,6 +9,7 @@ export class Item {
     model:string;
     manfacture:string;
     sellerid:number;
+    Image:string;
 
-   
+
 }

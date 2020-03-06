@@ -1,17 +1,42 @@
-<input type="text" id="itemName" required [(ngModel)]="itemName" name="itemName">
-<input type="button" value="Search" (click)="get()"/>
-<div *ngFor="let it of items">
-   <div class="card col-md-3">
-   
-    <div class="card-body">
-      
-      <h4 class="card-body">{{items|json}}</h4>
-      <input type="button" class="btn btn-primary stretched-link" value="addToCart" (click)="addToCart()">
-      
- 
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
+<img src="assets/logee.jpg" class="i" alt="LOGO" height="50" width="58">
+    <a href="" class="navbar-brand"><h3 class="text-primary" id="headoo">ONLINE SHOPPING</h3></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     
-      
-       
-  </div>
+  </nav>
+
+<div class="jumbotron"> 
+<table>
+  <td>
+<a routerLink="searchproduct" class= "btn btn-primary active" id="b1" role="=button" routerLinkActive="active">SearchProducts</a>
+</td>
+<td></td>
+<td>
+<a routerLink="displaycart" class= "btn btn-primary active" id="b2">ShoppingCart</a>
+</td>
+<td>
+  <a routerLink="buyersignup" class= "btn btn-success active">BuyerSignUp</a>
+  </td>
+  <td>
+    <a routerLink="sellersignup" class= "btn btn-success active">SellerSignUp</a>
+    </td>
+    <td>
+<a routerLink="login" class="btn btn-success active">login</a>
+</td>
+</table>
+
+<router-outlet></router-outlet>
+ 
+ 
 </div>
+
 </div>
+   
+</body>
+
+
+
