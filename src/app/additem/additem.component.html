@@ -1,0 +1,51 @@
+
+<h3>Add ITEM</h3>
+<div [hidden]="submitted" style="width: 300px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="categoryid">categoryid</label>
+      <input type="text" class="form-control" id="categoryid" required [(ngModel)]="product.categoryid" name="username">
+    </div>
+
+    <div class="form-group">
+      <label for="subcategoryid">subcategoryid</label>
+      <input type="text" class="form-control" id="subcategoryid" required [(ngModel)]="product.subcategoryid" name="subcategoryid" required>
+    </div>
+    <div class="form-group">
+   <label for=" itemCost"> itemCost</label>
+      <input type="text" class="form-control" id=" itemCost" required [(ngModel)]="product.itemCost" name=" itemCost" required>
+    </div>
+    <div class="form-group">
+      <label for="itemName">itemName</label>
+      <input type="text" class="form-control" id="itemName" required [(ngModel)]="product.itemName" name="itemName" required>
+    </div>
+    <div class="form-group">
+      <label for="itemDescription">itemDescription</label>
+      <input type="text" class="form-control" id="itemDescription" required [(ngModel)]="product.itemDescription" name="itemDescription">
+    </div>
+    <div class="form-group">
+        <label for="quantity">quantity</label>
+        <input type="text" class="form-control" id="quantity" required [(ngModel)]="product.quantity" name="quantity" required>
+      </div>
+      <div class="form-group">
+        <label for="model">model</label>
+        <input type="text" class="form-control" id="model" required [(ngModel)]="product.model" name="model" required>
+      </div>
+      <div class="form-group">
+        <label for="manfacture">manfacture</label>
+        <input type="text" class="form-control" id="manfacture" required [(ngModel)]="product.manfacture" name="manfacture" required>
+      </div>
+      <div class="form-group">
+        <label for="sellerid">sellerid</label>
+        <input type="text" class="form-control" id="sellerid" required [(ngModel)]="product.sellerid" name="sellerid" required>
+      </div>
+    
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Added Itemsuccessfully!</h4>
+  <button class="btn btn-success" (click)="newProduct()">Add Item</button>
+</div>
+ 

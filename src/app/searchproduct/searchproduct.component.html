@@ -1,0 +1,33 @@
+<div class="jumbotron">
+<table>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+   <h3 id="h3">Find By ItemName</h3>
+ <div style="width: 300px;">
+   <form (ngSubmit)="onSubmit()">
+     <div class="form-group">
+       <label for="ItemName"><h1 class="text-primary" id="h3">SearchItems</h1></label>
+       <input type="text" class="form-control" id="searchStr" required [(ngModel)]="searchStr" name="searchStr">
+       <br/>
+       <button type="submit" class="btn btn-success" id="h3">Search</button>
+     </div>
+   </form>
+ </div>
+    </table>
+ <div class="card-columns">
+   <div class="row">
+     <div class="col-sm-12">
+ <ul  *ngFor="let product of items">
+    
+     <div class="card bg-light">
+       <div class="card-body text-center">
+         <table><td><tr>
+       <app-product-details [item] = "product"></app-product-details></tr></td></table>
+   </div>
+   </div> 
+ 
+  </ul>
+ </div>
+ </div>
+ </div>
+  </div>
+  
